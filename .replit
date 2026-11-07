@@ -1,0 +1,12 @@
+entrypoint = "index.php"
+modules = ["php-8.2"]
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+run = ["php", "-S", "0.0.0.0:8000", "-t", "."]
+
+[[ports]]
+localPort = 8000
+externalPort = 80
